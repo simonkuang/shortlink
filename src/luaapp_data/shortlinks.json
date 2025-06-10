@@ -1,0 +1,117 @@
+{
+  "shortlinks": [
+    {
+      "code": "google",
+      "target_url": "https://www.google.com",
+      "method": "GET",
+      "description": "Google 首页 - 简单 GET 跳转"
+    },
+    {
+      "code": "api1",
+      "target_url": "https://api.example.com/v1/data",
+      "method": "POST",
+      "headers": {
+        "Authorization": "Bearer your-token-here",
+        "Content-Type": "application/json",
+        "X-Custom-Header": "custom-value"
+      },
+      "cookies": {
+        "session": "abc123",
+        "user_id": "12345"
+      },
+      "description": "API 调用 - POST 请求带认证"
+    },
+    {
+      "code": "secure",
+      "target_url": "https://secure.example.com/dashboard",
+      "method": "GET",
+      "headers": {
+        "X-Forwarded-Proto": "https",
+        "X-Real-IP": "client-ip"
+      },
+      "cookies": {
+        "auth_token": "xyz789",
+        "prefer_lang": "zh-CN"
+      },
+      "description": "安全页面 - GET 请求带特定 headers 和 cookies"
+    },
+    {
+      "code": "update",
+      "target_url": "https://api.example.com/v1/users/profile",
+      "method": "PUT",
+      "headers": {
+        "Authorization": "Bearer put-token",
+        "Content-Type": "application/json",
+        "X-HTTP-Method-Override": "PUT"
+      },
+      "description": "更新接口 - PUT 请求"
+    },
+    {
+      "code": "delete",
+      "target_url": "https://api.example.com/v1/resources/123",
+      "method": "DELETE",
+      "headers": {
+        "Authorization": "Bearer delete-token",
+        "X-Confirm": "true"
+      },
+      "description": "删除接口 - DELETE 请求"
+    },
+    {
+      "code": "patch",
+      "target_url": "https://api.example.com/v1/settings",
+      "method": "PATCH",
+      "headers": {
+        "Authorization": "Bearer patch-token",
+        "Content-Type": "application/json-patch+json"
+      },
+      "cookies": {
+        "csrf_token": "patch-csrf-123"
+      },
+      "description": "部分更新 - PATCH 请求"
+    },
+    {
+      "code": "webhook",
+      "target_url": "https://webhook.example.com/incoming",
+      "method": "POST",
+      "headers": {
+        "X-Webhook-Secret": "your-webhook-secret",
+        "Content-Type": "application/json",
+        "User-Agent": "ShortLink-Service/1.0"
+      },
+      "description": "Webhook 调用 - POST 请求"
+    },
+    {
+      "code": "github",
+      "target_url": "https://github.com/your-username/your-repo",
+      "method": "GET",
+      "description": "GitHub 仓库 - 简单跳转"
+    },
+    {
+      "code": "admin",
+      "target_url": "https://admin.example.com/login",
+      "method": "GET",
+      "headers": {
+        "X-Admin-Access": "true",
+        "X-Forwarded-For": "trusted-ip"
+      },
+      "cookies": {
+        "admin_session": "admin-123",
+        "two_factor": "verified"
+      },
+      "description": "管理后台 - 带认证信息的 GET 跳转"
+    },
+    {
+      "code": "test",
+      "target_url": "https://httpbin.org/anything",
+      "method": "POST",
+      "headers": {
+        "X-Test-Header": "test-value",
+        "Authorization": "Bearer test-token"
+      },
+      "cookies": {
+        "test_cookie": "test-value"
+      },
+      "description": "测试端点 - 用于验证功能"
+    }
+  ]
+}
